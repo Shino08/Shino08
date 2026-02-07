@@ -9,7 +9,7 @@ Soy un apasionado de la construcción de sistemas completos. Mi enfoque va desde
 ## 🧑‍💻 Sobre mí
 
 - 🚀 **Enfoque:** Creación de aplicaciones web empresariales con autenticación segura y paneles administrativos.
-- 🎓 **Formación:** Estudiante de Producción Industrial, aplicando lógica de procesos y estadística al desarrollo de software.
+- 🎓 **Formación:** Estudiante de Ingenieria de Sistemas, aplicando lógica de procesos y estadística al desarrollo de software.
 - 🧠 **Filosofía:** Construir código limpio, escalable y, sobre todo, fácil de mantener.
 
 ---
