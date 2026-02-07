@@ -51,7 +51,7 @@ Soy un apasionado de la construcción de sistemas completos. Mi enfoque va desde
 
 ## 📫 Conectemos
 
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:deiberjvc@gmail.com)
+- ✉️ Email: `deiberjvc@gmail.com`
 
 ---
 
