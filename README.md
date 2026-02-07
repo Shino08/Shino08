@@ -1,4 +1,4 @@
-# 👋 Hola, soy [Tu Nombre]
+# 👋 Hola, soy Deiber Vasquez
 
 Soy **desarrollador full‑stack** web, especializado en JavaScript/Node.js, React y bases de datos SQL. Me gusta diseñar y construir sistemas completos: desde la arquitectura del backend y la base de datos, hasta la interfaz de usuario y la experiencia final.
 
