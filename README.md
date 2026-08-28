@@ -1,69 +1,80 @@
-# 👋 Hola, soy Deiber Vasquez
+# ¡Hola! Soy Deiber Vásquez 👋
 
-### **Desarrollador Full-Stack** | Ingeniería de Sistemas & Optimización de Procesos Industriales
+### Desarrollador Full Stack | Sistemas de gestión, APIs y aplicaciones web
 
-Soy un desarrollador apasionado por la construcción de ecosistemas digitales robustos y escalables. Mi enfoque integra la **lógica de ingeniería** con la **eficiencia operativa**, permitiéndome diseñar software que no solo cumple una función, sino que optimiza procesos complejos de negocio e industria.
+Soy desarrollador de software enfocado en construir soluciones web funcionales, mantenibles y orientadas a necesidades reales de negocio. Me interesan especialmente los sistemas administrativos, plataformas de gestión, APIs robustas, diseño de bases de datos y despliegue de aplicaciones.
 
----
+Actualmente continúo fortaleciendo mis conocimientos en arquitectura modular, desarrollo backend con TypeScript, infraestructura y buenas prácticas para crear software escalable.
 
-## 🧑‍💻 Sobre mí
+## 🚀 Lo que construyo
 
-- 🚀 **Enfoque Actual:** Arquitecturas modulares bajo principios **SOLID** y patrones de diseño avanzados, con especial énfasis en entornos **TypeScript** y **PHP**.
-- 🎓 **Formación:** Estudiante de Ingeniería de Sistemas, aplicando estadística y gestión de recursos al ciclo de vida del software.
-- 🧠 **Filosofía:** Construir código limpio, tipado y fácil de mantener. Mi prioridad es la escalabilidad y el rendimiento técnico.
+- Aplicaciones web y móviles con enfoque en experiencia de usuario y procesos de negocio.
+- APIs REST, autenticación y servicios backend estructurados.
+- Sistemas administrativos, inventarios, módulos de gestión y soluciones tipo ERP.
+- Monorepos que integran frontend, backend y herramientas compartidas.
+- Entornos de desarrollo y despliegue con Docker, Git, Linux y servicios cloud.
 
----
+## 🧰 Stack tecnológico
 
-## 🛠️ Tech Stack
+### Frontend y móvil
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-0F172A?style=for-the-badge&logo=tailwind-css&logoColor=38BDF8)
 
-### **Lenguajes y Core**
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
-![SQL](https://img.shields.io/badge/sql-%2300758F.svg?style=for-the-badge&logo=mysql&logoColor=white)
-![Bash](https://img.shields.io/badge/bash-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+### Backend y datos
+![TypeScript](https://img.shields.io/badge/TypeScript-0F172A?style=for-the-badge&logo=typescript&logoColor=3178C6)
+![NestJS](https://img.shields.io/badge/NestJS-0F172A?style=for-the-badge&logo=nestjs&logoColor=E0234E)
+![Node.js](https://img.shields.io/badge/Node.js-0F172A?style=for-the-badge&logo=node.js&logoColor=5FA04E)
+![PHP](https://img.shields.io/badge/PHP-0F172A?style=for-the-badge&logo=php&logoColor=777BB4)
+![Prisma](https://img.shields.io/badge/Prisma-0F172A?style=for-the-badge&logo=prisma&logoColor=2D3748)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0F172A?style=for-the-badge&logo=postgresql&logoColor=4169E1)
+![MySQL](https://img.shields.io/badge/MySQL-0F172A?style=for-the-badge&logo=mysql&logoColor=4479A1)
 
-### **Backend & Frameworks**
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
-![POO/MVC](https://img.shields.io/badge/Arquitectura-MVC%20%7C%20POO-orange?style=for-the-badge)
+### Infraestructura y herramientas
+![Docker](https://img.shields.io/badge/Docker-0F172A?style=for-the-badge&logo=docker&logoColor=2496ED)
+![Linux](https://img.shields.io/badge/Linux-0F172A?style=for-the-badge&logo=linux&logoColor=FCC624)
+![Git](https://img.shields.io/badge/Git-0F172A?style=for-the-badge&logo=git&logoColor=F05032)
+![GitHub](https://img.shields.io/badge/GitHub-0F172A?style=for-the-badge&logo=github&logoColor=white)
 
-### **Frontend & UI**
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+## 🌟 Proyectos destacados
 
-### **Ecosistema & Infraestructura**
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
-![n8n](https://img.shields.io/badge/n8n-FF6D5A?style=for-the-badge&logo=n8n&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+### Monorepo Full Stack con NestJS, React y Prisma
+Arquitectura de monorepo basada en TypeScript, pnpm y Turbo, orientada a integrar aplicaciones frontend y backend dentro de una estructura escalable.
 
----
+**Tecnologías:** TypeScript, NestJS, React, Prisma, pnpm y Turbo.
 
-## 🏗️ Proyectos y Áreas de Enfoque
+🔗 [Ver repositorio](https://github.com/Shino08/Monorepo-Nestjs-React-pnpm-TS-Prisma)
 
-- 💳 **Sistema de Control de Gastos:** Desarrollo de arquitectura **Monorepo** con **React + Express + TypeScript**, aplicando principios de desacoplamiento y patrones de diseño para controladores y rutas.
-- 🏫 **Gestión Académica Profesional:** Digitalización de expedientes y asistencia escolar bajo un modelo de datos robusto con historial académico y auditoría.
-- 📦 **Logística e Industria (Procura):** Creación de sistemas para la gestión de suministros, flujos de aprobación y requisiciones industriales.
----
+### Proyectos de interfaces y experiencias web
+Colección de proyectos web donde experimento con interfaces responsivas, animaciones, Tailwind CSS, JavaScript y React.
 
-## 💡 Especialidades Técnicas
+🔗 [Portafolio animado con Tailwind](https://github.com/Shino08/Portafolio_animado-Tailwind)  
+🔗 [Proyecto React con scroll dinámico](https://github.com/Shino08/proyecto-react-dinamica-scroll-de-moto)
 
-- 🏗️ **Arquitectura de Software:** Implementación de Clean Architecture, Patrones Repository y Singleton para sistemas escalables.
-- 🐧 **Entornos de Desarrollo:** Usuario avanzado de **Linux**, con flujos de trabajo optimizados mediante terminal y Bash scripting.
-- 📊 **Gestión de Datos:** Diseño de bases de datos relacionales complejas con optimización de consultas y migraciones seguras.
+### Laboratorios de arquitectura y backend
+Espacios prácticos dedicados a patrones de diseño, autenticación JWT, carga de archivos, APIs, Prisma y organización modular de aplicaciones.
 
----
+🔗 [Patrones de diseño](https://github.com/Shino08?tab=repositories&q=DesignPattern&type=&language=&sort=)  
+🔗 [API con arquitectura modular](https://github.com/Shino08/SystemBayWatchApis3)  
+🔗 [Autenticación JWT](https://github.com/Shino08/api_login_jwt)
 
-## 📫 Conectemos
+## 📚 Actualmente aprendiendo
 
-- ✉️ Email: `deiberjvc@gmail.com`
-- 📍 Guacara, Carabobo, Venezuela.
+- Clean Architecture y diseño modular.
+- Arquitecturas multiempresa y sistemas administrativos escalables.
+- Seguridad en APIs, autenticación y autorización.
+- Automatización de despliegues, backups y administración de servidores Linux.
+- Integración de inteligencia artificial en aplicaciones y flujos de negocio.
 
----
+## 🎯 Mi objetivo
 
-> *"La excelencia no es un acto, sino un hábito."* — Inspirado por la mejora continua y el código de alta calidad.
+Mi objetivo es participar en proyectos donde pueda aportar en el desarrollo completo de una solución: desde la interfaz y la lógica de negocio hasta la base de datos, la API y el despliegue.
+
+Me interesa seguir construyendo productos digitales útiles, especialmente herramientas administrativas, plataformas de gestión, sistemas empresariales y aplicaciones web modernas.
+
+## 📫 Contacto
+
+- GitHub: [@Shino08](https://github.com/Shino08)
+- Ubicación: Venezuela
+- Abierto a colaborar en proyectos de desarrollo web, backend y sistemas de gestión.
