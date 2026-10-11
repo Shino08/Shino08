@@ -19,6 +19,7 @@ Actualmente continúo fortaleciendo mis conocimientos en arquitectura modular, d
 ### Frontend y móvil
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Astro](https://img.shields.io/badge/Astro-0F172A?style=for-the-badge&logo=astro&logoColor=BC52EE)
 ![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-0F172A?style=for-the-badge&logo=tailwind-css&logoColor=38BDF8)
 
@@ -47,7 +48,7 @@ Arquitectura de monorepo basada en TypeScript, pnpm y Turbo, orientada a integra
 🔗 [Ver repositorio](https://github.com/Shino08/Monorepo-Nestjs-React-pnpm-TS-Prisma)
 
 ### Proyectos de interfaces y experiencias web
-Colección de proyectos web donde experimento con interfaces responsivas, animaciones, Tailwind CSS, JavaScript y React.
+Colección de proyectos web donde experimento con interfaces responsivas, animaciones, Astro, Tailwind CSS, JavaScript y React.
 
 🔗 [Portafolio animado con Tailwind](https://github.com/Shino08/Portafolio_animado-Tailwind)  
 🔗 [Proyecto React con scroll dinámico](https://github.com/Shino08/proyecto-react-dinamica-scroll-de-moto)
