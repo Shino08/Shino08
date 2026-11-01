@@ -1,0 +1,55 @@
+name: Update profile README
+
+on:
+  schedule:
+    # 12:17 UTC / 08:17 America/Caracas. Off the top of the hour on purpose:
+    # GitHub delays workflows scheduled exactly at :00 when many repos share it.
+    - cron: "17 12 * * *"
+  workflow_dispatch:
+
+# The repository default is "read", so the write permission must be explicit.
+permissions:
+  contents: write
+
+# Never let two runs push to the same branch at the same time.
+concurrency:
+  group: update-profile-readme
+  cancel-in-progress: false
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      # Optional. Set it in Settings -> Secrets and variables -> Actions ->
+      # Variables to publish RSS/Atom entries in the blog block.
+      BLOG_FEED_URL: ${{ vars.BLOG_FEED_URL }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: true
+
+      - name: Run generator tests
+        run: python3 -m unittest discover -s .github/scripts -p "test_*.py"
+
+      - name: Update README
+        run: python3 .github/scripts/update_readme.py
+
+      - name: Commit and push
+        run: |
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "README is already up to date, nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update profile README automatically"
+          # Rebase onto a remote commit that landed while this run was working.
+          # A conflict aborts the run loudly instead of overwriting the README.
+          git pull --rebase --quiet origin "$GITHUB_REF_NAME"
+          # Pushing with GITHUB_TOKEN does not trigger another workflow run,
+          # so this workflow can never recurse into itself.
+          git push

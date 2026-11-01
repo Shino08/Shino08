@@ -60,6 +60,34 @@ Espacios prácticos dedicados a patrones de diseño, autenticación JWT, carga d
 🔗 [API con arquitectura modular](https://github.com/Shino08/SystemBayWatchApis3)  
 🔗 [Autenticación JWT](https://github.com/Shino08/api_login_jwt)
 
+## 📊 Estadísticas
+
+<!-- AUTO-STATS-START -->
+| Métrica | Valor |
+| --- | --- |
+| Repositorios públicos | 76 |
+| Estrellas acumuladas | 6 |
+| Seguidores | 5 |
+| Lenguaje principal | JavaScript (21 repos) |
+<!-- AUTO-STATS-END -->
+
+## 🕘 Actividad reciente
+
+<!-- AUTO-REPOS-START -->
+- **[uTV](https://github.com/Shino08/uTV)** · `Kotlin` · 4 estrellas · 2026-10-21
+- **[Astro](https://github.com/Shino08/Astro)** · `Astro` · 2026-10-16
+- **[U-as](https://github.com/Shino08/U-as)** · `TypeScript` · 2026-09-21
+- **[Laravel_Crud](https://github.com/Shino08/Laravel_Crud)** · `PHP` · 2026-09-04
+- **[Laravel-intro](https://github.com/Shino08/Laravel-intro)** · `PHP` · 2026-08-31
+- **[Docker](https://github.com/Shino08/Docker)** · `Dockerfile` · 2026-07-23
+<!-- AUTO-REPOS-END -->
+
+## 📰 Últimas publicaciones
+
+<!-- BLOG-LIST-START -->
+_Sin feed RSS configurado. Añade la variable de repositorio `BLOG_FEED_URL` en Settings → Secrets and variables → Actions → Variables para publicar aquí tus artículos._
+<!-- BLOG-LIST-END -->
+
 ## 📚 Actualmente aprendiendo
 
 - Clean Architecture y diseño modular.
