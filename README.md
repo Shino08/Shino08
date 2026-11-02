@@ -18,7 +18,7 @@
 <p align="center">
   <img alt="Repositorios" src="https://img.shields.io/badge/Repositorios-77-0F172A?style=for-the-badge&logo=github&logoColor=FFFFFF" />
   <img alt="Estrellas" src="https://img.shields.io/badge/Estrellas-6-0F172A?style=for-the-badge&logo=github&logoColor=FCC624" />
-  <img alt="Seguidores" src="https://img.shields.io/badge/Seguidores-5-0F172A?style=for-the-badge&logo=github&logoColor=38BDF8" />
+  <img alt="Seguidores" src="https://img.shields.io/badge/Seguidores-4-0F172A?style=for-the-badge&logo=github&logoColor=38BDF8" />
   <img alt="Principal" src="https://img.shields.io/badge/Principal-JavaScript_%2821%29-0F172A?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
 </p>
 <!-- AUTO-STATS-END -->
