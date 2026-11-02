@@ -209,9 +209,3 @@ Métricas en vivo servidas por shields.io: se actualizan solas, sin esperar a la
 <p align="center">
   📍 Venezuela · 🤝 Abierto a colaborar en proyectos de desarrollo web, backend y sistemas de gestión.
 </p>
-
-<br />
-
-<p align="center">
-  <sub>README actualizado automáticamente cada día con GitHub Actions · © 2026 Deiber Vásquez</sub>
-</p>
