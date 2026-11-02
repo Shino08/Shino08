@@ -194,13 +194,24 @@ class FeedTests(unittest.TestCase):
 
 
 class RenderingTests(unittest.TestCase):
-    def test_stats_report_public_repos_stars_and_followers(self):
+    def test_stats_render_badges_with_public_repos_stars_and_followers(self):
         user = {"public_repos": 76, "followers": 5}
         repos = [make_repo("a", stargazers_count=4), make_repo("b", stargazers_count=2)]
         rendered = update_readme.render_stats(user, repos)
-        self.assertIn("| Repositorios públicos | 76 |", rendered)
-        self.assertIn("| Estrellas acumuladas | 6 |", rendered)
-        self.assertIn("| Seguidores | 5 |", rendered)
+        self.assertIn("Repositorios-76-", rendered)
+        self.assertIn("Estrellas-6-", rendered)
+        self.assertIn("Seguidores-5-", rendered)
+        self.assertIn("style=for-the-badge", rendered)
+
+    def test_repos_render_a_table_with_a_header(self):
+        rendered = update_readme.render_repos([make_repo("kept")], "Shino08")
+        self.assertTrue(rendered.startswith("| Proyecto | Stack | Estrellas | Actualizado |"))
+
+    def test_repo_description_pipes_do_not_break_the_table(self):
+        repo = make_repo("kept", description="a | b")
+        rendered = update_readme.render_repos([repo], "Shino08")
+        row = [line for line in rendered.splitlines() if "kept" in line][0]
+        self.assertIn("a \\| b", row)
 
     def test_repos_exclude_profile_repo_forks_and_archived(self):
         repos = [

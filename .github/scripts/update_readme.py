@@ -55,6 +55,33 @@ DEFAULT_REPO_LIMIT = 6
 DEFAULT_BLOG_LIMIT = 5
 MAX_DESCRIPTION_LENGTH = 120
 
+# Badge styling mirrors the hand-written sections of the profile README.
+BADGE_STYLE = "for-the-badge"
+BADGE_BACKGROUND = "0F172A"
+
+# shields.io simple-icons slug and brand colour for the most common languages.
+LANGUAGE_BADGES = {
+    "JavaScript": ("javascript", "F7DF1E"),
+    "TypeScript": ("typescript", "3178C6"),
+    "Python": ("python", "3776AB"),
+    "PHP": ("php", "777BB4"),
+    "Kotlin": ("kotlin", "7F52FF"),
+    "Java": ("openjdk", "FFFFFF"),
+    "C#": ("dotnet", "512BD4"),
+    "C++": ("cplusplus", "00599C"),
+    "Go": ("go", "00ADD8"),
+    "Rust": ("rust", "FFFFFF"),
+    "Astro": ("astro", "BC52EE"),
+    "HTML": ("html5", "E34F26"),
+    "CSS": ("css3", "1572B6"),
+    "Dockerfile": ("docker", "2496ED"),
+    "Shell": ("gnubash", "4EAA25"),
+    "Vue": ("vuedotjs", "4FC08D"),
+    "Svelte": ("svelte", "FF3E00"),
+    "Ruby": ("ruby", "CC342D"),
+    "Lua": ("lua", "2C2D72"),
+}
+
 
 class UpdateError(RuntimeError):
     """Raised when the README cannot be updated safely."""
@@ -235,6 +262,29 @@ def language_breakdown(repos: list) -> list:
     return counter.most_common()
 
 
+def _badge_text(value) -> str:
+    """Escape one shields.io static-badge path segment.
+
+    A single ``-`` separates the segments, so a literal dash is doubled and
+    spaces become underscores, which is what shields.io expects.
+    """
+    text = str(value).replace("-", "--").replace("_", "__")
+    return urllib.parse.quote(text.replace(" ", "_"), safe="")
+
+
+def _badge(label: str, value, logo: str = "", color: str = "FFFFFF") -> str:
+    path = f"{_badge_text(label)}-{_badge_text(value)}-{BADGE_BACKGROUND}"
+    query = f"?style={BADGE_STYLE}"
+    if logo:
+        query += f"&logo={logo}&logoColor={color}"
+    return f"![{label}](https://img.shields.io/badge/{path}{query})"
+
+
+def _cell(value) -> str:
+    """Make a value safe inside a Markdown table cell."""
+    return " ".join(str(value).split()).replace("|", "\\|")
+
+
 def render_stats(user: dict, repos: list) -> str:
     public_repos = user.get("public_repos")
     if not isinstance(public_repos, int):
@@ -243,17 +293,16 @@ def render_stats(user: dict, repos: list) -> str:
     total_stars = sum(repo.get("stargazers_count", 0) for repo in repos)
     languages = language_breakdown(repos)
 
-    rows = [
-        "| Métrica | Valor |",
-        "| --- | --- |",
-        f"| Repositorios públicos | {public_repos} |",
-        f"| Estrellas acumuladas | {total_stars} |",
-        f"| Seguidores | {followers} |",
+    badges = [
+        _badge("Repositorios", public_repos, "github", "FFFFFF"),
+        _badge("Estrellas", total_stars, "github", "FCC624"),
+        _badge("Seguidores", followers, "github", "38BDF8"),
     ]
     if languages:
         primary, primary_count = languages[0]
-        rows.append(f"| Lenguaje principal | {primary} ({primary_count} repos) |")
-    return "\n".join(rows)
+        logo, color = LANGUAGE_BADGES.get(primary, ("", "FFFFFF"))
+        badges.append(_badge("Principal", f"{primary} ({primary_count})", logo, color))
+    return "\n".join(badges)
 
 
 def render_repos(repos: list, login: str, limit: int = DEFAULT_REPO_LIMIT) -> str:
@@ -266,44 +315,43 @@ def render_repos(repos: list, login: str, limit: int = DEFAULT_REPO_LIMIT) -> st
     ]
     candidates.sort(key=lambda repo: repo.get("pushed_at") or "", reverse=True)
 
-    lines: list = []
+    rows: list = []
     for repo in candidates[:limit]:
         name = repo.get("name", "")
         url = repo.get("html_url", f"https://github.com/{login}/{name}")
+
         description = " ".join((repo.get("description") or "").split())
         if len(description) > MAX_DESCRIPTION_LENGTH:
             description = description[: MAX_DESCRIPTION_LENGTH - 3].rstrip() + "..."
 
-        line = f"- **[{name}]({url})**"
+        project = f"**[{_cell(name)}]({url})**"
         if description:
-            line += f" — {description}"
+            project += f"<br>_{_cell(description)}_"
 
-        details: list = []
-        language = repo.get("language")
-        if language:
-            details.append(f"`{language}`")
+        language = _cell(repo.get("language") or "")
+        stack = f"`{language}`" if language else "—"
         stars = repo.get("stargazers_count", 0)
-        if stars:
-            details.append(f"{stars} estrellas")
-        pushed_at = (repo.get("pushed_at") or "")[:10]
-        if pushed_at:
-            details.append(pushed_at)
-        if details:
-            line += " · " + " · ".join(details)
+        star_cell = str(stars) if stars else "—"
+        pushed_at = (repo.get("pushed_at") or "")[:10] or "—"
 
-        lines.append(line)
+        rows.append(f"| {project} | {stack} | {star_cell} | {pushed_at} |")
 
-    if not lines:
+    if not rows:
         return "_No hay repositorios públicos para mostrar._"
-    return "\n".join(lines)
+
+    header = [
+        "| Proyecto | Stack | Estrellas | Actualizado |",
+        "| :--- | :--- | :---: | :---: |",
+    ]
+    return "\n".join(header + rows)
 
 
 def render_blog(entries) -> str:
     if entries is None:
         return (
-            "_Sin feed RSS configurado. Añade la variable de repositorio "
-            "`BLOG_FEED_URL` en Settings → Secrets and variables → Actions → "
-            "Variables para publicar aquí tus artículos._"
+            "> 💡 **Sin feed configurado.** Añade la variable de repositorio "
+            "`BLOG_FEED_URL` en **Settings → Secrets and variables → Actions → "
+            "Variables** y tus últimos artículos aparecerán aquí automáticamente."
         )
     if not entries:
         return "_El feed RSS configurado no contiene entradas._"

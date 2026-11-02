@@ -63,29 +63,29 @@ Espacios prácticos dedicados a patrones de diseño, autenticación JWT, carga d
 ## 📊 Estadísticas
 
 <!-- AUTO-STATS-START -->
-| Métrica | Valor |
-| --- | --- |
-| Repositorios públicos | 76 |
-| Estrellas acumuladas | 6 |
-| Seguidores | 5 |
-| Lenguaje principal | JavaScript (21 repos) |
+![Repositorios](https://img.shields.io/badge/Repositorios-77-0F172A?style=for-the-badge&logo=github&logoColor=FFFFFF)
+![Estrellas](https://img.shields.io/badge/Estrellas-6-0F172A?style=for-the-badge&logo=github&logoColor=FCC624)
+![Seguidores](https://img.shields.io/badge/Seguidores-5-0F172A?style=for-the-badge&logo=github&logoColor=38BDF8)
+![Principal](https://img.shields.io/badge/Principal-JavaScript_%2821%29-0F172A?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 <!-- AUTO-STATS-END -->
 
 ## 🕘 Actividad reciente
 
 <!-- AUTO-REPOS-START -->
-- **[uTV](https://github.com/Shino08/uTV)** · `Kotlin` · 4 estrellas · 2026-10-21
-- **[Astro](https://github.com/Shino08/Astro)** · `Astro` · 2026-10-16
-- **[U-as](https://github.com/Shino08/U-as)** · `TypeScript` · 2026-09-21
-- **[Laravel_Crud](https://github.com/Shino08/Laravel_Crud)** · `PHP` · 2026-09-04
-- **[Laravel-intro](https://github.com/Shino08/Laravel-intro)** · `PHP` · 2026-08-31
-- **[Docker](https://github.com/Shino08/Docker)** · `Dockerfile` · 2026-07-23
+| Proyecto | Stack | Estrellas | Actualizado |
+| :--- | :--- | :---: | :---: |
+| **[if-precios](https://github.com/Shino08/if-precios)** | `TypeScript` | — | 2026-11-01 |
+| **[uTV](https://github.com/Shino08/uTV)** | `Kotlin` | 4 | 2026-10-21 |
+| **[Astro](https://github.com/Shino08/Astro)** | `Astro` | — | 2026-10-16 |
+| **[U-as](https://github.com/Shino08/U-as)** | `TypeScript` | — | 2026-09-21 |
+| **[Laravel_Crud](https://github.com/Shino08/Laravel_Crud)** | `PHP` | — | 2026-09-04 |
+| **[Laravel-intro](https://github.com/Shino08/Laravel-intro)** | `PHP` | — | 2026-08-31 |
 <!-- AUTO-REPOS-END -->
 
 ## 📰 Últimas publicaciones
 
 <!-- BLOG-LIST-START -->
-_Sin feed RSS configurado. Añade la variable de repositorio `BLOG_FEED_URL` en Settings → Secrets and variables → Actions → Variables para publicar aquí tus artículos._
+> 💡 **Sin feed configurado.** Añade la variable de repositorio `BLOG_FEED_URL` en **Settings → Secrets and variables → Actions → Variables** y tus últimos artículos aparecerán aquí automáticamente.
 <!-- BLOG-LIST-END -->
 
 ## 📚 Actualmente aprendiendo
