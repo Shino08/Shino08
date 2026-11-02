@@ -180,22 +180,6 @@ Métricas en vivo servidas por shields.io: se actualizan solas, sin esperar a la
 
 ---
 
-## 📊 Estadísticas de GitHub
-
-<div align="center">
-
-  <img height="150" src="https://github-readme-stats.vercel.app/api?username=Shino08&show_icons=true&theme=transparent&hide_border=true&title_color=38BDF8&icon_color=38BDF8&text_color=c9d1d9&count_private=true" alt="Estadísticas de GitHub" />
-  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shino08&layout=compact&langs_count=6&theme=transparent&hide_border=true&title_color=38BDF8&text_color=c9d1d9" alt="Lenguajes más usados" />
-
-  <br />
-  <br />
-
-  <img height="150" src="https://streak-stats.demolab.com/?user=Shino08&theme=transparent&hide_border=true&ring=38BDF8&fire=38BDF8&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=38BDF8" alt="Racha de contribuciones" />
-
-</div>
-
----
-
 ## 📰 Últimas publicaciones
 
 <!-- BLOG-LIST-START -->
