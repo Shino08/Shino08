@@ -203,15 +203,21 @@ class RenderingTests(unittest.TestCase):
         self.assertIn("Seguidores-5-", rendered)
         self.assertIn("style=for-the-badge", rendered)
 
-    def test_repos_render_a_table_with_a_header(self):
+    def test_repos_render_an_html_table_with_a_header(self):
         rendered = update_readme.render_repos([make_repo("kept")], "Shino08")
-        self.assertTrue(rendered.startswith("| Proyecto | Stack | Estrellas | Actualizado |"))
+        self.assertTrue(rendered.startswith("<table>"))
+        self.assertIn("<b>Proyecto</b>", rendered)
 
-    def test_repo_description_pipes_do_not_break_the_table(self):
-        repo = make_repo("kept", description="a | b")
+    def test_repo_description_is_html_escaped(self):
+        repo = make_repo("kept", description="a <b> & c")
         rendered = update_readme.render_repos([repo], "Shino08")
         row = [line for line in rendered.splitlines() if "kept" in line][0]
-        self.assertIn("a \\| b", row)
+        self.assertIn("a &lt;b&gt; &amp; c", row)
+
+    def test_repo_row_carries_live_shield_badges(self):
+        rendered = update_readme.render_repos([make_repo("kept")], "Shino08")
+        for kind in ("stars", "forks", "issues", "issues-pr"):
+            self.assertIn(f"img.shields.io/github/{kind}/Shino08/kept", rendered)
 
     def test_repos_exclude_profile_repo_forks_and_archived(self):
         repos = [

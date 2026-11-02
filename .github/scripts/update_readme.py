@@ -26,6 +26,7 @@ Environment:
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import os
 import re
@@ -277,12 +278,20 @@ def _badge(label: str, value, logo: str = "", color: str = "FFFFFF") -> str:
     query = f"?style={BADGE_STYLE}"
     if logo:
         query += f"&logo={logo}&logoColor={color}"
-    return f"![{label}](https://img.shields.io/badge/{path}{query})"
+    return f'<img alt="{label}" src="https://img.shields.io/badge/{path}{query}" />'
 
 
-def _cell(value) -> str:
-    """Make a value safe inside a Markdown table cell."""
-    return " ".join(str(value).split()).replace("|", "\\|")
+def _html(value) -> str:
+    """Escape a value for use inside an HTML table cell."""
+    return html.escape(" ".join(str(value).split()), quote=True)
+
+
+def _shield(slug: str, kind: str, alt: str) -> str:
+    """A live shields.io badge, so the number never needs a commit."""
+    return (
+        f'<img alt="{alt}" src="https://img.shields.io/github/{kind}/{slug}'
+        '?style=flat-square&labelColor=343b41" />'
+    )
 
 
 def render_stats(user: dict, repos: list) -> str:
@@ -302,7 +311,7 @@ def render_stats(user: dict, repos: list) -> str:
         primary, primary_count = languages[0]
         logo, color = LANGUAGE_BADGES.get(primary, ("", "FFFFFF"))
         badges.append(_badge("Principal", f"{primary} ({primary_count})", logo, color))
-    return "\n".join(badges)
+    return '<p align="center">\n  ' + "\n  ".join(badges) + "\n</p>"
 
 
 def render_repos(repos: list, login: str, limit: int = DEFAULT_REPO_LIMIT) -> str:
@@ -319,31 +328,51 @@ def render_repos(repos: list, login: str, limit: int = DEFAULT_REPO_LIMIT) -> st
     for repo in candidates[:limit]:
         name = repo.get("name", "")
         url = repo.get("html_url", f"https://github.com/{login}/{name}")
+        slug = f"{login}/{name}"
 
         description = " ".join((repo.get("description") or "").split())
         if len(description) > MAX_DESCRIPTION_LENGTH:
             description = description[: MAX_DESCRIPTION_LENGTH - 3].rstrip() + "..."
 
-        project = f"**[{_cell(name)}]({url})**"
+        label = f"<b>{_html(name)}</b>"
         if description:
-            project += f"<br>_{_cell(description)}_"
+            label += f"<br><i>{_html(description)}</i>"
 
-        language = _cell(repo.get("language") or "")
-        stack = f"`{language}`" if language else "—"
-        stars = repo.get("stargazers_count", 0)
-        star_cell = str(stars) if stars else "—"
-        pushed_at = (repo.get("pushed_at") or "")[:10] or "—"
+        language = _html(repo.get("language") or "")
+        stack = f"<code>{language}</code>" if language else "&mdash;"
+        pushed_at = (repo.get("pushed_at") or "")[:10] or "&mdash;"
 
-        rows.append(f"| {project} | {stack} | {star_cell} | {pushed_at} |")
+        rows.append(
+            "    <tr>\n"
+            f'      <td><a href="{_html(url)}">{label}</a></td>\n'
+            f"      <td>{stack}</td>\n"
+            f'      <td>{_shield(slug, "stars", "Stars")}</td>\n'
+            f'      <td>{_shield(slug, "forks", "Forks")}</td>\n'
+            f'      <td>{_shield(slug, "issues", "Issues")}</td>\n'
+            f'      <td>{_shield(slug, "issues-pr", "Pull requests")}</td>\n'
+            f"      <td>{pushed_at}</td>\n"
+            "    </tr>"
+        )
 
     if not rows:
         return "_No hay repositorios públicos para mostrar._"
 
     header = [
-        "| Proyecto | Stack | Estrellas | Actualizado |",
-        "| :--- | :--- | :---: | :---: |",
+        "<table>",
+        '  <thead align="center">',
+        "    <tr>",
+        "      <td><b>Proyecto</b></td>",
+        "      <td><b>Stack</b></td>",
+        "      <td><b>⭐ Stars</b></td>",
+        "      <td><b>Forks</b></td>",
+        "      <td><b>Issues</b></td>",
+        "      <td><b>PRs</b></td>",
+        "      <td><b>Actualizado</b></td>",
+        "    </tr>",
+        "  </thead>",
+        "  <tbody>",
     ]
-    return "\n".join(header + rows)
+    return "\n".join(header + rows + ["  </tbody>", "</table>"])
 
 
 def render_blog(entries) -> str:

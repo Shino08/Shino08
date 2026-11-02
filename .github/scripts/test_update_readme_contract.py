@@ -271,22 +271,14 @@ class GeneratorContractTests(unittest.TestCase):
 
     def test_v5_repo_list_is_ordered_by_most_recent_push(self):
         rendered = generator.render_repos([dict(item) for item in API_REPOS], "Shino08")
-        names = [
-            line.split("[")[1].split("]")[0]
-            for line in rendered.splitlines()
-            if line.startswith("| **[")
-        ]
+        names = re.findall(r'href="https://github\.com/Shino08/([^"]+)"', rendered)
         self.assertEqual(names, ["alpha", "beta"])
 
     def test_v5_repository_order_survives_a_generator_run(self):
         write_text(self.readme, TEMPLATE)
         self.run_generator()
         body = block_bodies(read_bytes(self.readme).decode("utf-8"))[1]
-        names = [
-            line.split("[")[1].split("]")[0]
-            for line in body.splitlines()
-            if line.startswith("| **[")
-        ]
+        names = re.findall(r'href="https://github\.com/Shino08/([^"]+)"', body)
         self.assertEqual(names, ["alpha", "beta"])
 
 
