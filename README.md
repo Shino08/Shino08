@@ -5,10 +5,6 @@
   <p><strong>Desarrollador Full Stack · Sistemas de gestión, APIs y aplicaciones web</strong></p>
 
   <p>
-    <a href="https://odontovas.pages.dev" target="_blank">
-      <img src="https://img.shields.io/badge/PORTAFOLIO-odontovas.pages.dev-007ACC?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portafolio Web" />
-    </a>
-    &nbsp;
     <a href="https://github.com/Shino08" target="_blank">
       <img src="https://img.shields.io/badge/GitHub-Shino08-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
     </a>
@@ -202,8 +198,6 @@ Métricas en vivo servidas por shields.io: se actualizan solas, sin esperar a la
 
 <p align="center">
   <a href="https://github.com/Shino08" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  &nbsp;
-  <a href="https://odontovas.pages.dev" target="_blank"><img src="https://img.shields.io/badge/PORTAFOLIO-007ACC?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portafolio" /></a>
 </p>
 
 <p align="center">
