@@ -123,7 +123,7 @@ Métricas en vivo servidas por shields.io: se actualizan solas, sin esperar a la
       <td><img alt="Forks" src="https://img.shields.io/github/forks/Shino08/if-precios?style=flat-square&labelColor=343b41" /></td>
       <td><img alt="Issues" src="https://img.shields.io/github/issues/Shino08/if-precios?style=flat-square&labelColor=343b41" /></td>
       <td><img alt="Pull requests" src="https://img.shields.io/github/issues-pr/Shino08/if-precios?style=flat-square&labelColor=343b41" /></td>
-      <td>2026-11-01</td>
+      <td>2026-11-03</td>
     </tr>
     <tr>
       <td><a href="https://github.com/Shino08/uTV"><b>uTV</b></a></td>
