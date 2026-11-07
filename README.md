@@ -16,7 +16,7 @@
 
 <!-- AUTO-STATS-START -->
 <p align="center">
-  <img alt="Repositorios" src="https://img.shields.io/badge/Repositorios-77-0F172A?style=for-the-badge&logo=github&logoColor=FFFFFF" />
+  <img alt="Repositorios" src="https://img.shields.io/badge/Repositorios-76-0F172A?style=for-the-badge&logo=github&logoColor=FFFFFF" />
   <img alt="Estrellas" src="https://img.shields.io/badge/Estrellas-6-0F172A?style=for-the-badge&logo=github&logoColor=FCC624" />
   <img alt="Seguidores" src="https://img.shields.io/badge/Seguidores-4-0F172A?style=for-the-badge&logo=github&logoColor=38BDF8" />
   <img alt="Principal" src="https://img.shields.io/badge/Principal-JavaScript_%2821%29-0F172A?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
@@ -117,15 +117,6 @@ Métricas en vivo servidas por shields.io: se actualizan solas, sin esperar a la
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://github.com/Shino08/if-precios"><b>if-precios</b></a></td>
-      <td><code>TypeScript</code></td>
-      <td><img alt="Stars" src="https://img.shields.io/github/stars/Shino08/if-precios?style=flat-square&labelColor=343b41" /></td>
-      <td><img alt="Forks" src="https://img.shields.io/github/forks/Shino08/if-precios?style=flat-square&labelColor=343b41" /></td>
-      <td><img alt="Issues" src="https://img.shields.io/github/issues/Shino08/if-precios?style=flat-square&labelColor=343b41" /></td>
-      <td><img alt="Pull requests" src="https://img.shields.io/github/issues-pr/Shino08/if-precios?style=flat-square&labelColor=343b41" /></td>
-      <td>2026-11-03</td>
-    </tr>
-    <tr>
       <td><a href="https://github.com/Shino08/uTV"><b>uTV</b></a></td>
       <td><code>Kotlin</code></td>
       <td><img alt="Stars" src="https://img.shields.io/github/stars/Shino08/uTV?style=flat-square&labelColor=343b41" /></td>
@@ -169,6 +160,15 @@ Métricas en vivo servidas por shields.io: se actualizan solas, sin esperar a la
       <td><img alt="Issues" src="https://img.shields.io/github/issues/Shino08/Laravel-intro?style=flat-square&labelColor=343b41" /></td>
       <td><img alt="Pull requests" src="https://img.shields.io/github/issues-pr/Shino08/Laravel-intro?style=flat-square&labelColor=343b41" /></td>
       <td>2026-08-31</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Shino08/Docker"><b>Docker</b></a></td>
+      <td><code>Dockerfile</code></td>
+      <td><img alt="Stars" src="https://img.shields.io/github/stars/Shino08/Docker?style=flat-square&labelColor=343b41" /></td>
+      <td><img alt="Forks" src="https://img.shields.io/github/forks/Shino08/Docker?style=flat-square&labelColor=343b41" /></td>
+      <td><img alt="Issues" src="https://img.shields.io/github/issues/Shino08/Docker?style=flat-square&labelColor=343b41" /></td>
+      <td><img alt="Pull requests" src="https://img.shields.io/github/issues-pr/Shino08/Docker?style=flat-square&labelColor=343b41" /></td>
+      <td>2026-07-23</td>
     </tr>
   </tbody>
 </table>
